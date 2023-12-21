@@ -13,6 +13,4 @@ class Customer < ApplicationRecord
     withdrawn: 1,
     banned: 2
   }
-
 end
-

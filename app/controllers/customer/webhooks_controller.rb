@@ -38,6 +38,7 @@ class Customer::WebhooksController < ApplicationController
         end
       end
       # トランザクション処理終了
+      puts 'success'
       customer.cart_items.destroy_all
       OrderMailer.complete(email: session.customer_details.email).deliver_later
       redirect_to session.success_url
